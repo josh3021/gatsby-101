@@ -6,7 +6,7 @@ import Seo from "../components/Seo";
 
 export default function IndexPage({ data }: PageProps<Queries.StickersQuery>) {
   return (
-    <Layout title="Welcome to DevStickers 👋🏻">
+    <Layout title="찬도야미안해 전시회에 오신 걸 환영합니다! 👋🏻">
       <section className="grid">
         {data.allContentfulStickerPack.nodes.map((node, index) => (
           <article key={index}>
@@ -16,7 +16,6 @@ export default function IndexPage({ data }: PageProps<Queries.StickersQuery>) {
             />
             <Link to={`products/${node.id}`}>
               <h1>{node.name}</h1>
-              <h4>${node.price}</h4>
             </Link>
           </article>
         ))}
@@ -31,7 +30,6 @@ export const query = graphql`
       nodes {
         id
         name
-        price
         preview {
           gatsbyImageData(height: 250, placeholder: BLURRED)
         }

@@ -5,7 +5,7 @@ import Seo from "../components/Seo";
 export default function AboutUsPage() {
   return (
     <Layout title="About Us">
-      <p>We are the happies sticker store.</p>
+      <p>찬도야 미안해에 오신걸 환영합니다.</p>
     </Layout>
   );
 }

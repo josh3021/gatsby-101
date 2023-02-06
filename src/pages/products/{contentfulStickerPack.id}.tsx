@@ -17,7 +17,6 @@ export default function ProductDetail({ data }: IProductDetailProps) {
       <>
         <GatsbyImage image={image} alt={data.contentfulStickerPack?.name!} />
         <h2>{data.contentfulStickerPack?.name}</h2>
-        <h4>${data.contentfulStickerPack?.price}</h4>
       </>
     </Layout>
   );
@@ -27,7 +26,6 @@ export const query = graphql`
   query Product($id: String) {
     contentfulStickerPack(id: { eq: $id }) {
       name
-      price
       preview {
         gatsbyImageData(height: 250, placeholder: BLURRED)
       }
